@@ -1,0 +1,51 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="56" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../components/libraries/block_dev/sdc/nrf_block_dev_sdc.h" useHWbreakpoint="false"/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="nRF52_project"/>
+  <ProjectSessionItem path="nRF52_project;nRF52_project"/>
+  <ProjectSessionItem path="nRF52_project;nRF52_project;Application"/>
+  <ProjectSessionItem path="nRF52_project;nRF52_project;Lcd"/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="14" y="3" useTextEdit="1" path="../src/main.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="165" useTextEdit="1" path="../src/lcd_power_cfg.c" left="0" top="141" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="37" y="22" useTextEdit="1" openedFrom="C:/Users/HyukSu/Documents/SEGGER Embedded Studio for ARM Projects/nRF52 project/src/lcd_power_cfg.c" path="../src/lcd_power_cfg.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="0" useTextEdit="1" folds0="2407" path="../src/bitmap.h" left="0" top="411" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../src/sdk_config.h" left="0" top="3" codecName="Default"/>
+ </Files>
+ <EMStudioWindow activeProject="nRF52_project" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
+</session>
