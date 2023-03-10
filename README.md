@@ -59,5 +59,5 @@ static const로 선언된 emblem_4bit_image의 맨 앞부분엔 헤더가 있습
 
 <br><br>
 ## 사용 예
-nRF52 project\src에서 main.c 파일에 생성된 헤더 파일을 include하고 <br>
+nRF52 project\src\main.c 파일에 생성된 헤더 파일을 include하고 <br>
 draw_layer함수에 생성된 헤더파일의 변수의 주소값을 인자로 넘겨주는 식으로 사용한다.
