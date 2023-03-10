@@ -205,8 +205,7 @@ void draw_layer(const IMAGE_DATA* image, const uint32_t x, const uint32_t y)
     uint32_t image_index = 0;
 
     uint32_t draw_height = image->height;
-    uint32_t max_index = layer_index + (LCD_WIDTH * image->height) + image->width;
-    uint32_t is_index_over = 0;
+    uint32_t max_index = layer_index + (LCD_WIDTH * (image->height - 1)) + image->width;
 
     /* position check */
     if (x >= LCD_WIDTH || y >= LCD_HEIGTH)
@@ -216,11 +215,10 @@ void draw_layer(const IMAGE_DATA* image, const uint32_t x, const uint32_t y)
     else if (max_index > LCD_PIXELS)
     {
         draw_height -= ((max_index - LCD_PIXELS) / LCD_WIDTH) + 1;
-        //is_index_over = 1;
     }
 
     /* draw layer */
-    if (image->type == COLOR_4) 
+    if (image->type == COLOR_4)
     {
         for (uint32_t i = 0; i < draw_height; i++)
         {
@@ -230,19 +228,11 @@ void draw_layer(const IMAGE_DATA* image, const uint32_t x, const uint32_t y)
             }
             layer_index += (LCD_WIDTH - image->width);
         }
-
-        if (is_index_over)
-        {
-            for (uint32_t i = layer_index; i < LCD_PIXELS; i++)
-            {
-                lcd_layer[layer_index++] = palette_4bit_data[get_palette_4bit_index(image->data, image_index++)];
-            }
-        }
     }
 
-    else if (image->type == COLOR_2) 
+    else if (image->type == COLOR_2)
     {
-        for (uint32_t i = 0; i < draw_height; i++) 
+        for (uint32_t i = 0; i < draw_height; i++)
         {
             for (uint32_t j = 0; j < image->width; j++)
             {
@@ -250,13 +240,5 @@ void draw_layer(const IMAGE_DATA* image, const uint32_t x, const uint32_t y)
             }
             layer_index += (LCD_WIDTH - image->width);
         }
-
-        if (is_index_over)
-        {
-            for (uint32_t i = layer_index; i < LCD_PIXELS; i++)
-            {
-                lcd_layer[layer_index++] = get_palette_2bit_data(image->data, image_index++);
-            }
-        }
-    }        
+    }
 }
