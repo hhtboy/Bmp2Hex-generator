@@ -56,3 +56,10 @@ bmp파일은 다음과 같은 형식을 필요로 합니다.
 static const로 선언된 emblem_4bit_image의 맨 앞부분엔 헤더가 있습니다.<br>
 50, 70은 이미지의 크기를 의미합니다. (50 X 70) <br>
 4는 색상 비트 수를 의미합니다.
+
+<br><br>
+## 헤더 파일 생성 후 활용 예
+nRF52 project\src\main.c 파일에 생성된 헤더 파일을 include하고 <br>
+draw_layer함수에 생성된 헤더파일의 변수의 주소값을 첫 번째인자로 넘겨주는 식으로 사용한다. <br>
+두 번째, 세 번째 인자는 lcd에서 image를 출력할 때, image의 왼쪽 위 모서리 x, y좌표이다.(단위 : pixel 수) <br>
+ex) draw_layer(&emblem_4bit_image, 0, 0);

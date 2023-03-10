@@ -24,8 +24,8 @@ int main(void)
 
         nrf_delay_ms(1000);
 
-        //draw_layer(&image_kau_2bit, 0, 0);
-        //print_layer();
+        draw_layer(&image_kau_2bit, 0, 0);
+        print_layer();
 
         nrf_delay_ms(1000);
     }
