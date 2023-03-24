@@ -101,6 +101,7 @@ int main()
     char bit_size[4];
     scanf("%s", file_name);
     fflush(stdin);
+    strcat()
 
     scanf("%s", bit_size);
     fflush(stdin);
@@ -359,7 +360,6 @@ void open_bmp_2bit(char* file_name)
     define_colors(colors, COLOR_2); 
     compact_color(colors, image_buf, result, width * height, COLOR_2);
 
-    for(int i = 0 ; i < width * height - 4 ; ) {
         unsigned char byte = result[i] << 6;
         byte = byte | (result[i+1] << 4);
         byte = byte | (result[i+2] << 2);
@@ -371,10 +371,11 @@ void open_bmp_2bit(char* file_name)
         if(i % 32 == 0) 
             fprintf(pNewFile, "\n");
     }
-    unsigned char byte = result[width * height - 4] << 6;
-    byte = byte | (result[width * height - 3] << 4);
-    byte = byte | (result[width * height - 2] << 2);
-    byte = byte | (result[width * height - 1]);
+
+    unsigned char byte = 0;
+    for (int i = ((width * height) % 4 + 4) % 5, int j = 6; i > 0; i--, j -= 2) {
+        byte = byte | (result[width * height - i] << j;
+    }
 
     fprintf(pNewFile, "0x%x", byte);
 
