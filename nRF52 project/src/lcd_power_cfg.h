@@ -25,14 +25,29 @@
 #define LCD_HEIGTH 240
 
 typedef enum palette_4bit {
-  BLACK, BLUE, GREEN, TURQUOIS,
-  RED, PURPLE, SADDLE_BROWN, LIGHT_GREY, 
-  GREY, LIGHT_BLUE, LIME, SKYBLUE,
-  TOMATO, FUCHSIA, YELLOW, WHITE 
+  BLACK=0x0000, 
+  BLUE=0x001F, 
+  GREEN=0x0400, 
+  TURQUOIS=0x471A,
+  RED=0xF800,
+  PURPLE=0x8010, 
+  SADDLE_BROWN=0x8A22, 
+  LIGHT_GREY=0xD69A, 
+  GREY=0x8410,
+  LIGHT_BLUE=0xAEDC,
+  LIME=0x07E0, 
+  SKYBLUE=0x867F,
+  TOMATO=0xFB08, 
+  FUCHSIA=0xF81F, 
+  YELLOW=0xFFE0, 
+  WHITE= 0xFFFF
 } PALETTE_4BIT;
 
 typedef enum palette_2bit {
-  BLACK_2BIT, BLUE_2BIT, RED_2BIT, WHITE_2BIT
+  BLACK_2BIT=0x0000, 
+  BLUE_2BIT=0x001F, 
+  RED_2BIT=0xF800, 
+  WHITE_2BIT=0xFFFF
 } PALETTE_2BIT;
 
 typedef enum color_bit_size {
@@ -64,11 +79,12 @@ static uint16_t lcd_layer[LCD_PIXELS];
 
 /* Color data array */
 static const uint16_t palette_4bit_data[16] = {
-    0x0000, 0x001F, 0x0400, 0x471A,
-  0xF800, 0x8010, 0x8A22, 0xD69A, 
-  0x8410, 0xAEDC, 0x07E0, 0x867F,
-  0xFB08, 0xF81F, 0xFFE0, 0xFFFF
+   BLACK, BLUE, GREEN, TURQUOIS,
+  RED, PURPLE, SADDLE_BROWN, LIGHT_GREY, 
+  GREY, LIGHT_BLUE, LIME, SKYBLUE,
+  TOMATO, FUCHSIA, YELLOW, WHITE 
 };
+
 
 /* Configure LCD pin */
 void lcd_pin_init(void);
