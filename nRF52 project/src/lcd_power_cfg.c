@@ -170,7 +170,7 @@ void print_layer()
 
 __STATIC_INLINE uint16_t get_palette_2bit_data(const uint8_t* palette_data, const uint32_t index)
 {
-    const uint16_t palette_2bit_data[4] = {0x0000, 0x001F, 0xF800, 0xFFFF};
+    const uint16_t palette_2bit_data[4] = {BLACK_2BIT, BLUE_2BIT, RED_2BIT, WHITE_2BIT};
     
     switch(index % 4)
     {
